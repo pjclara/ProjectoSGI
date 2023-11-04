@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manipular Objetos (html)</title>
+</head>
+<body>
+  <div class="progressive-bar-container">
+    <label for="progressive-bar">Progressive Bar</label>
+    <progress id="progressive-bar" value="0" max="100"></progress>
+  </div>
+    <div>
+        <canvas id="meuCanvas"></canvas>
+        <div>
+            <button id="btn_gaveta_left_abrir">Abrir gaveta da esquerda</button>
+            <button id="btn_gaveta_left_fechar">Fechar gaveta da esquerda</button>
+            <button id="btnY">Y</button>
+            <button id="btnZ">Z</button>
+        </div>
+    </div>
+
+    <script async src="/node_modules/unpkg.com_es-module-shims@1.8.0_dist_es-module-shims.js"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "/node_modules/three/build/three.module.js",
+        "three/addons/": "/node_modules/three/examples/jsm/"
+      }
+    }
+    </script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
+
+<style>
+  .progressive-bar-container {
+    position: absolute;
+   left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.895);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .progressive-bar {
+    width: 30%;
+    margin-top: 0.5%;
+    height: 2%;
+  }
+  label {
+    color: white;
+    font-size: 2em;
+  }
+</style>
